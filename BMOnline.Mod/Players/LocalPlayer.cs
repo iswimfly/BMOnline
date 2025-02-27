@@ -44,7 +44,7 @@ namespace BMOnline.Mod.Players
                     (byte)gameState.MainGameStage.gameKind,
                     (byte)(gameState.MainGameStage.gameKind == MainGameDef.eGameKind.Practice ? MgCourseDataManager.currentPracticeCourse : MgCourseDataManager.currentCourse),
                     (ushort)gameState.MainGameStage.stageIndex,
-                    (byte)player.charaKind, (byte)player.charaSkinIndex, customisationsNum, customisationsChara);
+                    (byte)player.m_CharaSelectDatum.m_CharaKind, (byte)player.charaSkinIndex, customisationsNum, customisationsChara);
             }
             lastPlayerInfo = playerInfo;
             state.GetPlayerInfoType().SendData(playerInfo);
